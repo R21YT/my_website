@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Brand | Official Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap');
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 100%);
+        }
+
+        .btn-red {
+            background-color: #e61e2a;
+            transition: all 0.3s ease;
+        }
+
+        .btn-red:hover {
+            background-color: #ff2b39;
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-red-600 text-white text-center py-2 text-sm font-bold tracking-widest uppercase">
+        New Summer Drop is Live! Free Shipping over $100
+    </div>
+
+    <nav class="flex justify-between items-center px-8 py-6 sticky top-0 z-50 bg-black/80 backdrop-blur-md">
+        <div class="text-2xl font-black tracking-tighter">CBOYS<span class="text-red-600">TV</span></div>
+        <div class="hidden md:flex space-x-8 uppercase text-sm font-bold">
+            <a href="#" class="hover:text-red-600">Shop All</a>
+            <a href="#" class="hover:text-red-600">Apparel</a>
+            <a href="#" class="hover:text-red-600">Accessories</a>
+            <a href="#" class="hover:text-red-600">Giveaway</a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <span>CART (0)</span>
+        </div>
+    </nav>
+
+    <section class="relative h-[85vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="data:image/png;base64,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" class="w-full h-full object-cover opacity-60" alt="Action Shot">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-6xl md:text-8xl font-black italic uppercase tracking-tighter mb-4">The New Drop</h1>
+            <p class="text-xl md:text-2xl mb-8 font-light tracking-wide text-gray-300">Limited Edition Gear for the Bold.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#shop" class="btn-red px-10 py-4 text-lg font-bold rounded-sm">SHOP THE DROP</a>
+                <a href="#" class="bg-white text-black px-10 py-4 text-lg font-bold rounded-sm hover:bg-gray-200">JOIN THE CREW</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="max-w-7xl mx-auto px-8 py-20">
+        <div class="flex justify-between items-end mb-12">
+            <h2 class="text-4xl font-black uppercase italic">Featured Gear</h2>
+            <a href="#" class="border-b-2 border-red-600 pb-1 text-sm font-bold tracking-widest">VIEW ALL</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div class="product-card group cursor-pointer">
+                <div class="bg-zinc-900 aspect-[3/4] mb-4 overflow-hidden rounded-sm relative">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover">
+                    <div class="absolute top-3 left-3 bg-red-600 px-2 py-1 text-xs font-bold uppercase">Sold Out</div>
+                </div>
+                <h3 class="text-lg font-bold uppercase">Signature Logo Hoodie</h3>
+                <p class="text-gray-400 font-bold">$65.00</p>
+            </div>
+
+            <div class="product-card group cursor-pointer">
+                <div class="bg-zinc-900 aspect-[3/4] mb-4 overflow-hidden rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-lg font-bold uppercase">"Wide Open" Tee</h3>
+                <p class="text-gray-400 font-bold">$32.00</p>
+            </div>
+
+            <div class="product-card group cursor-pointer">
+                <div class="bg-zinc-900 aspect-[3/4] mb-4 overflow-hidden rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-lg font-bold uppercase">Moto Snapback Hat</h3>
+                <p class="text-gray-400 font-bold">$28.00</p>
+            </div>
+
+            <div class="product-card group cursor-pointer">
+                <div class="bg-zinc-900 aspect-[3/4] mb-4 overflow-hidden rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1554568218-0f1715e72254?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-lg font-bold uppercase">Team Jersey 2.0</h3>
+                <p class="text-gray-400 font-bold">$85.00</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-zinc-900 py-20 px-8 text-center border-t border-zinc-800">
+        <h2 class="text-3xl font-black uppercase mb-4">Don't Miss the Next Drop</h2>
+        <p class="text-gray-400 mb-8 max-w-md mx-auto">Sign up for early access to giveaways and merchandise releases.</p>
+        <div class="flex flex-col md:flex-row max-w-lg mx-auto gap-2">
+            <input type="email" placeholder="ENTER YOUR EMAIL" class="flex-1 bg-black border border-zinc-700 px-4 py-3 focus:outline-none focus:border-red-600 uppercase text-sm">
+            <button class="btn-red px-8 py-3 font-bold uppercase">Join</button>
+        </div>
+    </section>
+
+</body>
+</html>
